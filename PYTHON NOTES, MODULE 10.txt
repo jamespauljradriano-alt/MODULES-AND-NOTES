@@ -1,0 +1,77 @@
+# Easy 1 — Creating a list of squares
+# The expression n ** 2 squares each number. The for part goes through every item and places the result in a new list.
+numbers = [1, 2, 3, 4, 5]
+squares = [n ** 2 for n in numbers]
+print(squares)
+
+# Output: [1, 4, 9, 16, 25]
+
+# -------------------------------------------------------
+
+# Easy 2 — Converting words to uppercase
+# The comprehension uses upper() on each word to create a new list containing uppercase text.
+words = ["python", "java", "html"]
+uppercase_words = [word.upper() for word in words]
+print(uppercase_words)
+
+# Output: ['PYTHON', 'JAVA', 'HTML']
+
+# -------------------------------------------------------
+
+# Easy 3 — Doubling numbers
+# The expression n * 2 doubles each item. The original numbers list remains unchanged.
+numbers = [2, 4, 6, 8]
+doubled = [n * 2 for n in numbers]
+print(doubled)
+
+# Output: [4, 8, 12, 16]
+
+# -------------------------------------------------------
+
+# Intermediate 4 — Filtering even numbers
+# The if condition checks whether each number has a remainder of zero when divided by 2. Only even numbers are included.
+numbers = [1, 2, 3, 4, 5, 6, 7, 8]
+even_numbers = [n for n in numbers if n % 2 == 0]
+print(even_numbers)
+
+# Output: [2, 4, 6, 8]
+
+# -------------------------------------------------------
+
+# Intermediate 5 — Selecting passing scores
+# The condition includes only scores that are 75 or higher. This demonstrates filtering with a condition.
+scores = [55, 82, 67, 49, 90, 73]
+passing = [score for score in scores if score >= 75]
+print(passing)
+
+# Output: [82, 90]
+
+# -------------------------------------------------------
+
+# Intermediate 6 — Changing values while filtering
+# The comprehension first checks for even numbers, then squares only the numbers that meet the condition.
+numbers = [1, 2, 3, 4, 5, 6]
+even_squares = [n ** 2 for n in numbers if n % 2 == 0]
+print(even_squares)
+
+# Output: [4, 16, 36]
+
+# -------------------------------------------------------
+
+# Hard 7 — Using if-else in a comprehension
+# The if-else expression chooses a label for every number. Unlike a filtering condition at the end, this keeps one result for each original item.
+numbers = [1, 2, 3, 4, 5]
+labels = ["Even" if n % 2 == 0 else "Odd" for n in numbers]
+print(labels)
+
+# Output: ['Odd', 'Even', 'Odd', 'Even', 'Odd']
+
+# -------------------------------------------------------
+
+# Hard 8 — Processing names with conditions
+# The condition len(name) > 5 selects names with more than five characters. title() capitalizes the first letter of each selected name.
+names = ["ana", "christopher", "bea", "daniel", "alexandra"]
+long_names = [name.title() for name in names if len(name) > 5]
+print(long_names)
+
+# Output: ['Christopher', 'Alexandra']

@@ -1,0 +1,96 @@
+# Easy 1 — append() method
+# append() is a list method. It adds one new item to the end of the list. It changes the original list.
+names = ["Ana", "Ben"]
+names.append("Cara")
+print(names)
+
+# Output: ['Ana', 'Ben', 'Cara']
+
+# -------------------------------------------------------
+
+# Easy 2 — len() function
+# len() is a built-in function. It receives the list as an argument and returns the number of items.
+numbers = [10, 20, 30, 40]
+count = len(numbers)
+print(count)
+
+# Output: 4
+
+# -------------------------------------------------------
+
+# Easy 3 — count() method
+# count() is a list method. It returns how many times a chosen value appears in the list.
+colors = ["red", "blue", "red", "green", "red"]
+how_many = colors.count("red")
+print(how_many)
+
+# Output: 3
+
+# -------------------------------------------------------
+
+# Intermediate 4 — sum() function
+# sum() is a built-in function. It adds the numeric items in an iterable, such as a list.
+scores = [85, 90, 78, 92]
+total = sum(scores)
+print("Total score:", total)
+
+# Output: Total score: 345
+
+# -------------------------------------------------------
+
+# Intermediate 5 — sort() method
+# sort() is a list method. It rearranges the original list in ascending order.
+prices = [250, 100, 400, 150]
+prices.sort()
+print(prices)
+
+# Output: [100, 150, 250, 400]
+
+# -------------------------------------------------------
+
+# Intermediate 6 — sorted() function
+# sorted() is a built-in function. It returns a new sorted list and leaves the original list unchanged.
+prices = [250, 100, 400, 150]
+new_prices = sorted(prices)
+print("Original:", prices)
+print("Sorted copy:", new_prices)
+
+# Output:
+# Original: [250, 100, 400, 150]
+# Sorted copy: [100, 150, 250, 400]
+
+# -------------------------------------------------------
+
+# Hard 7 — Using a method and functions together
+# append() changes the list by adding a score. len(), max(), and sum() are built-in functions used to count, find the highest value, and calculate the total.
+scores = [72, 88, 91, 65]
+scores.append(95)
+
+print("Scores:", scores)
+print("Number of scores:", len(scores))
+print("Highest score:", max(scores))
+print("Average:", sum(scores) / len(scores))
+
+# Output:
+# Scores: [72, 88, 91, 65, 95]
+# Number of scores: 5
+# Highest score: 95
+# Average: 82.2
+
+# -------------------------------------------------------
+
+# Hard 8 — Comparing sort() and sorted()
+# This example demonstrates the key difference: sorted() creates and returns a new sorted list, while sort() rearranges the original list.
+numbers = [9, 2, 7, 1, 5]
+
+copy_sorted = sorted(numbers)
+print("After sorted():", numbers)
+print("New sorted list:", copy_sorted)
+
+numbers.sort()
+print("After sort():", numbers)
+
+# Output:
+# After sorted(): [9, 2, 7, 1, 5]
+# New sorted list: [1, 2, 5, 7, 9]
+# After sort(): [1, 2, 5, 7, 9]
